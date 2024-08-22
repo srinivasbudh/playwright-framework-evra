@@ -12,7 +12,7 @@ test.describe('Property map filter', () => {
     userDetails.users.validUsers.forEach((user: { email: string; password: string; type: string }) => {
       test(`apply filters and verify changes in total list`, 
       { tag: ["@Filters", "@Regression", "@Smoke"]},
-      async ({ loginPage, searchPage , mapPage, propertyMapPage}) => {
+      async ({ loginPage, searchPage , propertyMapPage}) => {
         await loginPage.login(user.email, user.password);
         await searchPage.navigateToPropertyType();
         await propertyMapPage.verifyPageLoading();
