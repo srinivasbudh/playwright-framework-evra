@@ -3,7 +3,7 @@ import { OrtoniReportConfig } from "ortoni-report";
 
 // Configuration for Ortoni report
 let reportConfig: OrtoniReportConfig = {
-  projectName: "web-automation-admin",
+  projectName: "playwright-framework-evra",
   testType: "Regression",
   authorName: "Srinivas Budha",
   preferredTheme: "dark"
