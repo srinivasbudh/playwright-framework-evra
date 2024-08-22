@@ -1,4 +1,4 @@
-import { BasePage } from './basePage';
+import { BasePage } from './basepage';
 import { expect } from '@playwright/test';
 
 export class PropertyMapPage extends BasePage {
