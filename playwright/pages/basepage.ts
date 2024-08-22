@@ -1,6 +1,5 @@
 import { Page } from 'playwright';
 import { Locator, expect } from '@playwright/test';
-import colors from 'colors';
 
 // BasePage class encapsulates common page interactions for Playwright
 export class BasePage {
@@ -52,5 +51,30 @@ export class BasePage {
   //method to select dropdown item from a list
   async selectDropdownItem(itemText: string) {
     await this.page.getByText(itemText).click();
+  }
+
+  // uncheck a checkbox when required
+  async checkBoxUncheck(locatorFunction: () => Locator) {
+    const element = locatorFunction();
+    await element.waitFor({ state: 'visible', timeout: 30000 });
+    // Small delay to ensure the element is ready
+    await this.page.waitForTimeout(1000);
+    await element.uncheck();
+    await expect(element).not.toBeChecked();
+  }
+
+  //This mouse click is required to interact with the map
+  async mouseClickOnAElement(locatorFunction: () => Locator){
+    const element = locatorFunction();
+    const box = await element.boundingBox();
+  
+    if (box) {
+      const x = box.x + box.width +10;
+      const y = box.y + box.height + 10;
+      
+      await this.page.mouse.click(x, y);
+    } else {
+      console.error('Element not found or not visible');
+    }
   }
 }

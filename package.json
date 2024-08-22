@@ -1,14 +1,19 @@
 {
   "name": "playwright-framework-evra",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {},
+  "description": "test automation",
+  "scripts": {
+		"test": "npx playwright test",
+    "test:smoke": "npx playwright test --grep @smoke"
+	},
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
-    "@playwright/test": "^1.46.1",
-    "@types/node": "^22.5.0"
+    "@playwright/test": "^1.45.1",
+    "@types/node": "^20.14.10"
+  },
+  "dependencies": {
+    "playwright": "^1.45.1"
   }
 }
