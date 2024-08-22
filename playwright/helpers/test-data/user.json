@@ -1,0 +1,10 @@
+{
+    "users":{
+        "validUsers": [
+            {"email": "evraqamanual@test.wd.com", "password": "Asdfgh@123", "type": "validUser" }
+        ],
+        "invalidUsers": [
+            {"email": "evraqamanual@test.wd.com", "password": "Asdfgh@1234", "type": "wrongPassword", "errorMessage":""}
+        ]
+    }
+}
