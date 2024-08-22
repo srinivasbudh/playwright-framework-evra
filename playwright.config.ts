@@ -23,7 +23,7 @@ export default defineConfig({
   reporter: [ ["html"], ["github"]],
   use: {
     baseURL: 'https://evra.geophy.com',
-    headless: false,
+    headless: true,
     trace: 'on-first-retry', // Collect trace when retrying the failed test
     screenshot: 'only-on-failure', // Take screenshot only on failure
     video: 'off' // Disable video recording
