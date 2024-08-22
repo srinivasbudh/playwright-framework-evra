@@ -1,7 +1,7 @@
 import { Page } from 'playwright';
 import { Locator, expect } from '@playwright/test';
 
-// BasePage class encapsulates common page interactions for Playwright
+// BasePage class encapsulates common page interactions for Playwright 
 export class BasePage {
   protected page: Page;
 
